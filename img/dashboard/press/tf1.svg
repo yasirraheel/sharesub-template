@@ -1,0 +1,14 @@
+<svg width="110" height="32" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+ <g>
+  <title>Layer 1</title>
+  <path stroke="null" id="svg_7" fill="#112E45" d="m2.14894,1.81818l69.72133,0l0,28.73729l-69.72133,0l0,-28.73729z"/>
+  <g stroke="null">
+   <g stroke="null" clip-rule="evenodd" fill-rule="evenodd">
+    <path stroke="null" d="m0.74321,-20.68103l72.75601,0l0,72.75601l-72.75601,0l0,-72.75601z" fill-opacity="0" fill="#fff"/>
+    <path stroke="null" d="m37.12122,30.29339l-35.30831,0l35.30831,0z" fill="#373763"/>
+    <path stroke="null" fill="#fff" d="m5.91883,4.95924l18.72498,0l0,7.16025l-4.81779,0l0,14.31522l-9.08978,0l0,-14.31522l-4.81741,0l0,-7.16025zm41.85407,8.26279l-6.88471,0l0,-3.85869l9.36532,0l0,-4.4041l-18.44378,0l0,21.47547l9.07808,0l0,-7.43617l6.88471,0l0,-5.77652l0.00038,0zm18.45511,-8.26279l-9.08978,3.85302l0,16.79545l9.08978,0l0,-20.64848z"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,9 @@
+{
+  "name": "sharesub-offline-template",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs"
+  }
+}
