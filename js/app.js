@@ -38375,6 +38375,33 @@
         window.location.replace(safeReturn(new URLSearchParams(window.location.search).get("return")));
     }, true);
 
+    const closeMobileSheets = () => {
+        document.querySelectorAll(".dash-sheet.open").forEach((sheet) => sheet.classList.remove("open"));
+        document.querySelectorAll(".dash-tabbar-item.menu-open").forEach((item) => item.classList.remove("menu-open"));
+        document.querySelectorAll(".dash-sheet-backdrop.open").forEach((backdrop) => backdrop.classList.remove("open"));
+        document.body.classList.remove("overflow-hidden");
+    };
+
+    // Restore the captured mobile bottom-bar sheet navigation.
+    document.addEventListener("click", (event) => {
+        const trigger = event.target.closest?.(".dash-tabbar [data-submenu]");
+        if (trigger) {
+            event.preventDefault();
+            const sheet = document.getElementById(trigger.dataset.submenu);
+            const wasOpen = sheet?.classList.contains("open");
+            closeMobileSheets();
+            if (!wasOpen && sheet) {
+                sheet.classList.add("open");
+                trigger.classList.add("menu-open");
+                document.querySelectorAll(".dash-sheet-backdrop").forEach((backdrop) => backdrop.classList.add("open"));
+                document.body.classList.add("overflow-hidden");
+            }
+            return;
+        }
+        if (event.target.closest?.(".dash-sheet-backdrop")) closeMobileSheets();
+        if (event.target.closest?.(".dash-sheet a")) closeMobileSheets();
+    });
+
     if (protectedPaths.has(currentPath) && !isAuthenticated()) {
         const returnTo = `${window.location.pathname}${window.location.search}${window.location.hash}`;
         window.location.replace(`/en/userlogin?return=${encodeURIComponent(returnTo)}`);
