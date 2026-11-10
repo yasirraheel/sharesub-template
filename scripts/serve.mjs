@@ -28,6 +28,15 @@ const routeAliases = new Map([
   ['/en/brand/amazon', 'en/brand/amazon.html'],
   ['/en/register', 'en/register.html'],
   ['/en/userlogin', 'en/userlogin.html'],
+  ['/en/dashboard', 'en/dashboard.html'],
+  ['/en/my-shared-subscriptions', 'en/my-shared-subscriptions.html'],
+  ['/en/joined-subscriptions', 'en/joined-subscriptions.html'],
+  ['/en/waiting-list', 'en/waiting-list.html'],
+  ['/en/my-wallet', 'en/my-wallet.html'],
+  ['/en/my-cards', 'en/my-cards.html'],
+  ['/en/my-account', 'en/my-account.html'],
+  ['/en/my-settings', 'en/my-settings.html'],
+  ['/en/my-chat/subscriptions', 'en/my-chat/subscriptions.html'],
 ]);
 
 const server = http.createServer((req, res) => {

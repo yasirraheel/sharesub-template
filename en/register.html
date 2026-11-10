@@ -600,7 +600,7 @@
                     <div class="row subscription-final-content">
                         <div class="col-12 col-lg-8">
                             <div class="subscription-final-form d-md-block d-none">
-                                <form method="POST" action="/en/register.html" class="row">
+                                <form method="POST" action="/en/register.html" class="row" id="registerForm">
                                     <input type="hidden" name="_token" value="Jcufq6GdaQ95WTINTrsyZdfoj9tOKQ52tuom9mtJ" autocomplete="off">
                                     <div id="my_name_WPeXNo84dfM50iDn_wrap" style="display: none" aria-hidden="true">
                                         <input id="my_name_WPeXNo84dfM50iDn" name="my_name_WPeXNo84dfM50iDn" type="text" value="" autocomplete="nope" tabindex="-1">
@@ -609,13 +609,13 @@
                                     </div>
                                     <div class="col-12">
                                         <label for="email">Email</label>
-                                        <input name="email" id="email" placeholder="mail@example.com" type="text" class="input-sharesub " value="" required autocomplete="email" autofocus data-neverbounce="/en/verify-email" data-neverbounceerror="Invalid mail. Check your input."
+                                        <input name="email" id="email" placeholder="mail@example.com" type="email" class="input-sharesub " value="demo.register@example.com" required autocomplete="email" autofocus data-neverbounce="/en/verify-email" data-neverbounceerror="Invalid mail. Check your input."
                                             data-neverbounce-onload="true">
                                     </div>
 
                                     <div class="col-12">
                                         <label for="password">Password</label>
-                                        <input name="password" id="password" placeholder="Minimum 8 characters" type="password" class="input-sharesub " required autocomplete="new-password">
+                                        <input name="password" id="password" placeholder="Minimum 8 characters" type="password" class="input-sharesub " value="Demo1234!" minlength="8" required autocomplete="new-password">
                                     </div>
 
                                     <div class="col-12">
