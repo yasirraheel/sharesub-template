@@ -38359,6 +38359,22 @@
         if (label === "Chat") link.href = "/en/my-chat/subscriptions";
     });
 
+    // Captured login/register forms also have the original reCAPTCHA submit
+    // listener attached. Intercept the local demo forms during capture so
+    // that no network submit or page reload can happen in offline mode.
+    document.addEventListener("submit", (event) => {
+        const form = event.target;
+        if (!form?.matches?.("#loginForm, #registerForm")) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+        setAuthenticated();
+        window.location.replace(safeReturn(new URLSearchParams(window.location.search).get("return")));
+    }, true);
+
     if (protectedPaths.has(currentPath) && !isAuthenticated()) {
         const returnTo = `${window.location.pathname}${window.location.search}${window.location.hash}`;
         window.location.replace(`/en/userlogin?return=${encodeURIComponent(returnTo)}`);
