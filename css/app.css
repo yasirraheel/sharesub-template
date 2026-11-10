@@ -17852,8 +17852,12 @@ footer.sharesub-footer .footer-social img {
 
 .testimonials-section .testimonials-item-avatar {
     bottom: 40px;
+    border-radius: 50%;
+    height: 80px;
     left: calc(50% - 40px);
-    position: absolute
+    object-fit: cover;
+    position: absolute;
+    width: 80px
 }
 
 @media (min-width:768px) {
