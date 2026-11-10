@@ -17811,18 +17811,6 @@ footer.sharesub-footer .footer-social img {
     width: 100vw
 }
 
-/* Keep the full desktop testimonial row centered instead of showing clipped cards. */
-@media (min-width:1760px) {
-    .testimonials-section #comment-slider .splide__list {
-        justify-content: center;
-        transform: none !important;
-    }
-
-    .testimonials-section #comment-slider .splide__slide:nth-child(n+5) {
-        display: none;
-    }
-}
-
 @supports not (gap:1em) {
     .testimonials-section .testimonials-items>*+* {
         margin-left: 32px
